@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --color-brand-primary: #D62828;
+  --color-brand-dark: #9D0208;
+  --color-bg-base: #FCFCFC;
+  --color-bg-soft: #F5F5F5;
+  --color-text-main: #1A1A1A;
+
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-base text-text-main font-sans selection:bg-brand-primary/20 selection:text-brand-primary;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, #D62828 0%, #9D0208 100%);
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+}
+
+.product-card-shadow {
+  shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+.smooth-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
